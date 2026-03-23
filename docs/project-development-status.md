@@ -209,7 +209,6 @@
 | `docs/layered-memory.md` | 分层记忆 |
 | `docs/mem0.md` | Mem0 |
 | `docs/react-cognitive-framework.md` | ReAct |
-| `CanonWeave-分步开发指南.md` / `CanonWeave-完整落地方案-SOTA.md` | 规划与分步指南（根目录） |
 
 ---
 

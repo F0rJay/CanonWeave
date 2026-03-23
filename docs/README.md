@@ -28,9 +28,3 @@
 
 - `project-development-status.md`：开发侧能力与页面/API 清单（内部追踪用）
 
-## 根目录历史方案文档
-
-以下文档为历史方案与分步记录，适合做回溯参考，不建议作为当前实现规范：
-
-- `../CanonWeave-分步开发指南.md`
-- `../CanonWeave-完整落地方案-SOTA.md`
