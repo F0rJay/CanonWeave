@@ -1,4 +1,4 @@
-# CanonWeave 项目开发进度与能力总览
+# OmniStage（万象剧场）项目开发进度与能力总览
 
 > 本文档基于当前仓库代码与目录结构整理，用于快速了解**已实现功能**与**技术栈**。更新日期：2026-03-22（随迭代请同步修订）。
 
@@ -43,7 +43,7 @@
 
 | 技术 | 用途 |
 |------|------|
-| **better-sqlite3** | 嵌入式 SQLite；库文件默认 `data/canonweave.sqlite`（相对 `apps/web` 工作目录解析） |
+| **better-sqlite3** | 嵌入式 SQLite；库文件默认 `data/omnistage.sqlite`（相对 `apps/web` 工作目录解析） |
 | **Redis（可选，`redis` 包）** | DRE 多轮 A2A 总线镜像与跨拍上下文（`CW_DRE_A2A_REDIS_URL`） |
 
 ### 2.5 工具与集成

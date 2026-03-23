@@ -4,11 +4,11 @@ import type Database from "better-sqlite3";
 const MAX_CANONICAL_RETURN_CHARS = 120_000;
 
 export function requireContext(): { dbPath: string; userId: string } {
-  const dbPath = process.env.CANONWEAVE_DB_PATH?.trim();
-  const userId = process.env.CANONWEAVE_MCP_USER_ID?.trim();
+  const dbPath = process.env.OMNISTAGE_DB_PATH?.trim();
+  const userId = process.env.OMNISTAGE_MCP_USER_ID?.trim();
   if (!dbPath || !userId) {
     throw new Error(
-      "Missing CANONWEAVE_DB_PATH or CANONWEAVE_MCP_USER_ID (host must set when spawning MCP)."
+      "Missing OMNISTAGE_DB_PATH or OMNISTAGE_MCP_USER_ID (host must set when spawning MCP)."
     );
   }
   return { dbPath, userId };

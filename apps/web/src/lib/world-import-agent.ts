@@ -151,7 +151,7 @@ export async function generateCanonicalDraftWithModel(input: {
   const meta = input.objectGenMeta ?? {
     schemaName: "canonical_world",
     schemaDescription:
-      "CanonWeave world: meta, entities, relations, rules, timeline, lore_entries, locks, warnings; optional world_book, character_books (lorebook)",
+      "OmniStage world: meta, entities, relations, rules, timeline, lore_entries, locks, warnings; optional world_book, character_books (lorebook)",
   };
 
   if (!forceCanonicalTextOnlyMode()) {
@@ -233,8 +233,8 @@ export async function generateCanonicalDraftWithModel(input: {
 }
 
 /** 将非结构化素材扩写为 Canonical 时的系统提示（WorldForge WF-0 等可复用） */
-export const WORLD_IMPORT_SYSTEM = `你是 CanonWeave 世界书结构化 Agent。用户会粘贴 Markdown、YAML 片段、条目列表或混杂纯文本的设定稿。
-你的任务：提炼为**一个**符合 CanonWeave Canonical 形状的 JSON 对象（下列**必选**顶层键勿遗漏键名；**可选** lorebook 键在素材足够时务必填充）：
+export const WORLD_IMPORT_SYSTEM = `你是 OmniStage（万象剧场）世界书结构化 Agent。用户会粘贴 Markdown、YAML 片段、条目列表或混杂纯文本的设定稿。
+你的任务：提炼为**一个**符合 OmniStage Canonical 形状的 JSON 对象（下列**必选**顶层键勿遗漏键名；**可选** lorebook 键在素材足够时务必填充）：
 
 - meta：对象。必须尽量包含 title（字符串）。可含 subtitle、author、tone、notes 等。
 - entities：数组。角色/地点/组织/物品等；每项建议为对象，含 id（英文 slug）、name、kind、summary 等；信息不足可少字段。
@@ -292,7 +292,7 @@ export async function convertWorldSourceWithAgent(input: {
     objectGenMeta: {
       schemaName: "canonical_world",
       schemaDescription:
-        "CanonWeave: canonical meta/entities/relations/rules/timeline/lore_entries/locks/warnings + optional world_book & character_books lorebook",
+        "OmniStage: canonical meta/entities/relations/rules/timeline/lore_entries/locks/warnings + optional world_book & character_books lorebook",
     },
   });
 

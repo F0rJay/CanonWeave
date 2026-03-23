@@ -1,5 +1,5 @@
 {
-  "name": "canonweave",
+  "name": "omnistage",
   "private": true,
   "version": "0.1.0",
   "workspaces": [
@@ -7,11 +7,11 @@
     "mcp-servers/*"
   ],
   "scripts": {
-    "dev:web": "npm --workspace @canonweave/web run dev",
-    "build:mcp-dice": "npm run build --workspace @canonweave/mcp-dice-roller",
-    "build:mcp-world": "npm run build --workspace @canonweave/mcp-world-tools",
-    "build:web": "npm --workspace @canonweave/web run build",
+    "dev:web": "npm --workspace @omnistage/web run dev",
+    "build:mcp-dice": "npm run build --workspace @omnistage/mcp-dice-roller",
+    "build:mcp-world": "npm run build --workspace @omnistage/mcp-world-tools",
+    "build:web": "npm --workspace @omnistage/web run build",
     "build:all": "npm run build:mcp-dice && npm run build:mcp-world && npm run build:web",
-    "start:web": "npm --workspace @canonweave/web run start"
+    "start:web": "npm --workspace @omnistage/web run start"
   }
 }

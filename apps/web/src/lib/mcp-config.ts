@@ -1,6 +1,6 @@
 import path from "node:path";
 
-/** 为 true 时掷骰走 MCP stdio 子进程（@canonweave/mcp-dice-roller），否则内联 rollDiceFromExpression。 */
+/** 为 true 时掷骰走 MCP stdio 子进程（@omnistage/mcp-dice-roller），否则内联 rollDiceFromExpression。 */
 export function isMcpDiceEnabled(): boolean {
   const v = process.env.CW_USE_MCP_DICE?.trim().toLowerCase();
   return v === "1" || v === "true" || v === "yes";
@@ -28,7 +28,7 @@ export function getMcpDiceServerScriptPath(): string {
   );
 }
 
-/** world_reader / world_writer MCP 入口（@canonweave/mcp-world-tools） */
+/** world_reader / world_writer MCP 入口（@omnistage/mcp-world-tools） */
 /**
  * 为 true 时，酒馆 `/api/chat` 真实模型路径会向模型挂载工具（掷骰 + world_reader，可选 world_writer），
  * 由模型按需调用，底层仍走现有 MCP stdio 封装。

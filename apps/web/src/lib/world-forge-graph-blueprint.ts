@@ -35,7 +35,7 @@ export const WorldForgeGraphBlueprintSchema = z.object({
 
 export type WorldForgeGraphBlueprint = z.infer<typeof WorldForgeGraphBlueprintSchema>;
 
-const GRAPH_SYSTEM = `你是 CanonWeave **WorldForge·图谱解析员**（WF-3 节点）。
+const GRAPH_SYSTEM = `你是 OmniStage（万象剧场）**WorldForge·图谱解析员**（WF-3 节点）。
 基于用户大纲与解析员摘要，输出**结构化 JSON**（通过 schema），包含：
 - entities：已出现或隐含的角色、地点、势力、物品等（name 必填；kind/notes 选填）；
 - relations：实体之间的关系边（from/to 用实体 name；type 如「隶属」「对立」「因果」等）；

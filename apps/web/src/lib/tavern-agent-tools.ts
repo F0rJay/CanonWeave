@@ -113,7 +113,7 @@ export function buildTavernAgentTools(options: {
 
   const world_reader = tool({
     description:
-      "Read CanonWeave worlds for the current user: list_worlds | get_summary | list_versions | get_canonical | get_canonical_by_version_id.",
+      "Read OmniStage worlds for the current user: list_worlds | get_summary | list_versions | get_canonical | get_canonical_by_version_id.",
     inputSchema: zodSchema(WorldReaderInputSchema),
     execute: async (input) => {
       return await callWorldMcpTool(

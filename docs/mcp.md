@@ -1,4 +1,4 @@
-# CanonWeave MCP 接入
+# OmniStage（万象剧场）MCP 接入
 
 ## 架构概览
 
@@ -20,7 +20,7 @@
 若你感觉「没有实现」，常见原因是：
 
 1. **未编译 MCP**：仓库默认忽略 `dist/`。必须先执行根目录 `npm run build:mcp-world`，否则 Web 调用会报脚本不存在或 **503**。  
-2. **Claude Desktop 等外部宿主**：需自行配置 `command`/`args` 指向 **`world-tools/dist/index.js`**，并设置 `CANONWEAVE_DB_PATH`、`CANONWEAVE_MCP_USER_ID`（见本文「外部 MCP 宿主」）。  
+2. **Claude Desktop 等外部宿主**：需自行配置 `command`/`args` 指向 **`world-tools/dist/index.js`**，并设置 `OMNISTAGE_DB_PATH`、`OMNISTAGE_MCP_USER_ID`（见本文「外部 MCP 宿主」）。  
 3. **酒馆里模型不自动读写世界书**：默认仅注册 `dice_roll`；需在 `.env.local` 开启 **`CW_AGENT_MCP=1`** 才会把 `world_reader` 交给模型；**写入**还需 **`CW_AGENT_ALLOW_WORLD_WRITE=1`**（有风险，默认关闭）。  
 4. **WorldForge / 编剧工坊**：编排**不走 MCP**，直接走 Next.js API + SQLite；与 MCP 世界工具是**两条并行能力**。WorldForge 内解析员与各设计师的**提示词**中已写明：若运行宿主另行提供 **`web_search` / `web_fetch_extract`** 等工具，可用于检索公开资料（需对齐用户设定、避免抄袭）；**尚未**在 LangGraph 中实现为固定工具节点。
 5. **动态扮演引擎（DRE）**：`CW_DYNAMIC_RP_ENGINE=1` 时，酒馆 `/api/chat` 在**动作回合**会多段模型调用；该路径**不挂载** Agent MCP 工具（见 `docs/dynamic-rp-engine.md`）。
@@ -41,14 +41,14 @@ npm run build:all   # dice + world-tools + web
 
 ---
 
-## 世界书 MCP：`@canonweave/mcp-world-tools`
+## 世界书 MCP：`@omnistage/mcp-world-tools`
 
 ### 环境变量（宿主负责）
 
 | 变量 | 说明 |
 |------|------|
-| `CANONWEAVE_DB_PATH` | `canonweave.sqlite` 绝对路径 |
-| `CANONWEAVE_MCP_USER_ID` | 当前操作所属用户（与 `users.id` 一致） |
+| `OMNISTAGE_DB_PATH` | `omnistage.sqlite` 绝对路径 |
+| `OMNISTAGE_MCP_USER_ID` | 当前操作所属用户（与 `users.id` 一致） |
 
 **安全模型**：用户身份**只认环境变量**，工具参数里**不要**也不要求传 `user_id`，避免被模型注入越权。
 
@@ -74,7 +74,7 @@ npm run build:all   # dice + world-tools + web
 - `POST /api/mcp/world-reader` — Body 与 `world_reader` 参数相同。  
 - `POST /api/mcp/world-writer` — Body 与 `world_writer` 参数相同。  
 
-服务端自动设置 `CANONWEAVE_DB_PATH`、`CANONWEAVE_MCP_USER_ID`（当前 `cw_user_id`）。
+服务端自动设置 `OMNISTAGE_DB_PATH`、`OMNISTAGE_MCP_USER_ID`（当前 `cw_user_id`）。
 
 可选环境变量：`CW_MCP_WORLD_SERVER` — 自定义 `world-tools/dist/index.js` 路径。
 
@@ -126,7 +126,7 @@ SSE 事件：
 ```json
 {
   "mcpServers": {
-    "canonweave-dice": {
+    "omnistage-dice": {
       "command": "node",
       "args": ["/absolute/path/to/mcp-servers/dice-roller/dist/index.js"]
     }
@@ -139,12 +139,12 @@ SSE 事件：
 ```json
 {
   "mcpServers": {
-    "canonweave-world": {
+    "omnistage-world": {
       "command": "node",
       "args": ["/absolute/path/to/mcp-servers/world-tools/dist/index.js"],
       "env": {
-        "CANONWEAVE_DB_PATH": "/absolute/path/to/data/canonweave.sqlite",
-        "CANONWEAVE_MCP_USER_ID": "你的用户 UUID（与 cw_user_id 一致）"
+        "OMNISTAGE_DB_PATH": "/absolute/path/to/data/omnistage.sqlite",
+        "OMNISTAGE_MCP_USER_ID": "你的用户 UUID（与 cw_user_id 一致）"
       }
     }
   }

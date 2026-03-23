@@ -12,7 +12,7 @@ export const WF_MAX_BRIEF_BYTES = 96 * 1024;
 export const WF_MAX_CANONICAL_CONTEXT_BYTES = 24 * 1024;
 export const WF_MAX_PARSE_OUTPUT_CHARS = 6_000;
 
-export const WF_PARSE_SYSTEM = `你是 CanonWeave **WorldForge** 的解析员。用户会提供模糊大纲或残缺设定。
+export const WF_PARSE_SYSTEM = `你是 OmniStage（万象剧场）**WorldForge** 的解析员。用户会提供模糊大纲或残缺设定。
 请输出一份**结构化摘要**（使用 Markdown 小节），须包含：
 1. **体裁与基调**
 2. **已出现的实体 / 势力 / 地点**（列表，信息不足可写「未明确」）

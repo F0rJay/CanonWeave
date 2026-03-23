@@ -96,7 +96,7 @@ function getCustomOpenAIEndpoint(provider: string): {
   return { baseUrl, apiKey };
 }
 
-export const TAVERN_SYSTEM_PROMPT = `你是 CanonWeave 单人酒馆里的叙事者与酒馆主人。用第二人称或自然叙事带玩家沉浸其中；回复简洁有画面感，适合文字角色扮演。不要输出系统说明或元评论。`;
+export const TAVERN_SYSTEM_PROMPT = `你是 OmniStage（万象剧场）单人酒馆里的叙事者与酒馆主人。用第二人称或自然叙事带玩家沉浸其中；回复简洁有画面感，适合文字角色扮演。不要输出系统说明或元评论。`;
 
 /** 控制注入模型的世界观 JSON 长度，避免撑爆上下文 */
 const MAX_WORLD_CONTEXT_CHARS = 28_000;

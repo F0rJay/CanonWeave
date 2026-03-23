@@ -1,5 +1,5 @@
 /**
- * CanonWeave MCP 服务器：确定性掷骰（stdio）。
+ * OmniStage MCP 服务器：确定性掷骰（stdio）。
  * 工具名 dice_roll，与 Web BFF 通过 StdioClientTransport 对接。
  */
 import { randomInt } from "node:crypto";
@@ -68,10 +68,10 @@ function rollDiceFromExpression(expression: string): { ok: true; value: RollOk }
 }
 
 const server = new McpServer(
-  { name: "canonweave-dice-roller", version: "0.1.0" },
+  { name: "omnistage-dice-roller", version: "0.1.0" },
   {
     instructions:
-      "CanonWeave dice roller. Call dice_roll with expression like 2d6, d20+3, 1d8-1.",
+      "OmniStage dice roller. Call dice_roll with expression like 2d6, d20+3, 1d8-1.",
   }
 );
 

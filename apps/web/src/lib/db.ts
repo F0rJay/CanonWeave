@@ -100,7 +100,7 @@ type ListThreadsOptions = {
 };
 
 const DATA_DIR = path.resolve(process.cwd(), "../../data");
-const DB_PATH = path.join(DATA_DIR, "canonweave.sqlite");
+const DB_PATH = path.join(DATA_DIR, "omnistage.sqlite");
 
 let db: Database.Database | null = null;
 

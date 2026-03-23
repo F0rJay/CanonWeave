@@ -88,8 +88,8 @@
 | `post_history_instructions` | string? | 对话后置/风格指令（可选，对应 ST 同类字段） |
 | `alternate_greetings` | string[]? | 备选开场白（可选） |
 | `tags` | string[]? | 标签（可选） |
-| `appearance` | string? | **外貌与着装**（CanonWeave 显式字段；导出 ST 时可并入 `description`） |
-| `backstory` | string? | **经历与背景**（CanonWeave 显式字段） |
+| `appearance` | string? | **外貌与着装**（OmniStage 显式字段；导出 ST 时可并入 `description`） |
+| `backstory` | string? | **经历与背景**（OmniStage 显式字段） |
 | `relationships` | string? | **人际关系**摘要（可与 `relations` 互链，避免与世界书全局事实冲突） |
 | `speech_patterns` | string? | **口癖、称呼习惯、对事物的态度**（说话层面） |
 
@@ -146,7 +146,7 @@
 
 ---
 
-## 4. 运行时注入（CanonWeave 酒馆）
+## 4. 运行时注入（OmniStage 酒馆）
 
 **当前**：`formatWorldContextForPrompt` 主要注入整段 `canonical_json`。  
 **目标演进**（实现可分步）：

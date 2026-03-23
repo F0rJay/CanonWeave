@@ -1,11 +1,11 @@
-# @canonweave/mcp-world-tools
+# @omnistage/mcp-world-tools
 
-CanonWeave 官方 MCP：**`world_reader`**、**`world_writer`**（stdio），读写与 Web 共用的 SQLite 世界书。
+OmniStage（万象剧场）官方 MCP：**`world_reader`**、**`world_writer`**（stdio），读写与 Web 共用的 SQLite 世界书。
 
 ## 环境变量（必填）
 
-- `CANONWEAVE_DB_PATH` — `canonweave.sqlite` 绝对路径  
-- `CANONWEAVE_MCP_USER_ID` — 与 `users.id` 一致的用户 UUID  
+- `OMNISTAGE_DB_PATH` — `omnistage.sqlite` 绝对路径  
+- `OMNISTAGE_MCP_USER_ID` — 与 `users.id` 一致的用户 UUID  
 
 ## 构建
 

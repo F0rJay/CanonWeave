@@ -52,7 +52,7 @@ import {
   sharedMemoryToPatchObject,
 } from "@/lib/layered-memory";
 import { isMem0Enabled } from "@/lib/mem0-config";
-import { ingestMem0Turn, searchMem0ForTurn } from "@/lib/canonweave-mem0";
+import { ingestMem0Turn, searchMem0ForTurn } from "@/lib/omnistage-mem0";
 import {
   dreMemoryToPatchObject,
   formatDreMemoryDirectorAppend,

@@ -1,6 +1,6 @@
 # Mem0 接入（酒馆 `/api/chat`）
 
-Next.js 路由中**不能**直接打包 `mem0ai/oss`（其单文件会静态依赖 Qdrant、Neo4j、Azure 等全部可选驱动，导致 Turbopack 构建失败）。因此 CanonWeave 使用官方 **`MemoryClient`**（`import { MemoryClient } from "mem0ai"`），走 **Mem0 Platform HTTP API**（默认 `https://api.mem0.ai`，亦可指向[自托管 REST 服务](https://docs.mem0.ai/open-source/features/rest-api)）。
+Next.js 路由中**不能**直接打包 `mem0ai/oss`（其单文件会静态依赖 Qdrant、Neo4j、Azure 等全部可选驱动，导致 Turbopack 构建失败）。因此 OmniStage（万象剧场）使用官方 **`MemoryClient`**（`import { MemoryClient } from "mem0ai"`），走 **Mem0 Platform HTTP API**（默认 `https://api.mem0.ai`，亦可指向[自托管 REST 服务](https://docs.mem0.ai/open-source/features/rest-api)）。
 
 行为与原先设计一致：
 
@@ -39,9 +39,9 @@ cd apps/web && npm install mem0ai --legacy-peer-deps
 ## 代码入口
 
 - `apps/web/src/lib/mem0-config.ts`
-- `apps/web/src/lib/canonweave-mem0.ts`
+- `apps/web/src/lib/omnistage-mem0.ts`
 - `apps/web/src/app/api/chat/route.ts`
 
 ## 若必须在进程内跑 OSS Mem0
 
-请将 `mem0ai/oss` 放在 **独立 Node 服务**（或 Sidecar）中运行，CanonWeave 通过 HTTP 调用该服务；不要在与 Next 同进程的 bundle 中 `import "mem0ai/oss"`。
+请将 `mem0ai/oss` 放在 **独立 Node 服务**（或 Sidecar）中运行，OmniStage（万象剧场）通过 HTTP 调用该服务；不要在与 Next 同进程的 bundle 中 `import "mem0ai/oss"`。

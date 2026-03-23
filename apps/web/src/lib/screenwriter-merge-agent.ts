@@ -10,7 +10,7 @@ import { getLanguageModelForProvider } from "@/lib/llm";
 const MAX_TRANSCRIPT_BYTES = 96 * 1024;
 const MAX_CANONICAL_SNIPPET_BYTES = 28 * 1024;
 
-const MERGE_SYSTEM = `你是 CanonWeave 世界书**合并编排器**。你会收到：
+const MERGE_SYSTEM = `你是 OmniStage（万象剧场）世界书**合并编排器**。你会收到：
 1) 世界名称；
 2)（可选）当前 Canonical JSON 快照（可能被截断）；
 3) 用户与「编剧顾问」的多轮对话全文。
@@ -77,7 +77,7 @@ export async function mergeCanonicalFromScreenwriterDialogue(input: {
     objectGenMeta: {
       schemaName: "canonical_world_merge",
       schemaDescription:
-        "Merged CanonWeave world after screenwriter dialogue; full meta + array fields",
+        "Merged OmniStage world after screenwriter dialogue; full meta + array fields",
     },
   });
 

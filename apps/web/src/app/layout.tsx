@@ -10,7 +10,7 @@ const notoSans = Noto_Sans_SC({
 });
 
 export const metadata: Metadata = {
-  title: "CanonWeave · 单人酒馆",
+  title: "OmniStage（万象剧场）· 单人酒馆",
   description: "AI 角色扮演：酒馆会话、世界书与流式对话",
 };
 
@@ -25,7 +25,7 @@ export default function RootLayout({
         <header className="site-header">
           <div className="site-header-inner">
             <Link href="/tavern" className="site-logo">
-              CanonWeave <span>酒馆</span>
+              OmniStage <span>万象剧场</span>
             </Link>
             <nav className="site-nav" aria-label="主导航">
               <Link href="/tavern">酒馆</Link>

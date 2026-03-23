@@ -4,7 +4,7 @@ setlocal ENABLEDELAYEDEXPANSION
 cd /d "%~dp0"
 
 echo.
-echo [CanonWeave] Quick Start
+echo [OmniStage ^(万象剧场^)] Quick Start
 echo.
 
 where node >nul 2>nul

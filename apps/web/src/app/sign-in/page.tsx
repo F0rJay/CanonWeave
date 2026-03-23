@@ -2,7 +2,7 @@ export default function SignInPage() {
   return (
     <main className="page-shell">
       <div className="panel" style={{ maxWidth: 480 }}>
-        <h1 style={{ marginTop: 0 }}>进入 CanonWeave 酒馆</h1>
+        <h1 style={{ marginTop: 0 }}>进入 OmniStage（万象剧场）酒馆</h1>
         <p className="muted">
           当前为<strong>本地演示登录</strong>，仅用于开发阶段。后续可替换为 Clerk / Auth0
           等正式鉴权。

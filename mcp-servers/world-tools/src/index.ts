@@ -1,6 +1,6 @@
 /**
- * CanonWeave MCP：world_reader + world_writer（stdio）。
- * 鉴权：仅信任环境变量 CANONWEAVE_MCP_USER_ID，工具参数中不得传 user_id。
+ * OmniStage MCP：world_reader + world_writer（stdio）。
+ * 鉴权：仅信任环境变量 OMNISTAGE_MCP_USER_ID，工具参数中不得传 user_id。
  */
 import Database from "better-sqlite3";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
@@ -74,10 +74,10 @@ function openDb(dbPath: string): Database.Database {
 }
 
 const server = new McpServer(
-  { name: "canonweave-world-tools", version: "0.1.0" },
+  { name: "omnistage-world-tools", version: "0.1.0" },
   {
     instructions:
-      "CanonWeave world_reader / world_writer. Host MUST set CANONWEAVE_DB_PATH (sqlite) and CANONWEAVE_MCP_USER_ID. Never put user_id in tool arguments.",
+      "OmniStage world_reader / world_writer. Host MUST set OMNISTAGE_DB_PATH (sqlite) and OMNISTAGE_MCP_USER_ID. Never put user_id in tool arguments.",
   }
 );
 

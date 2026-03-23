@@ -8,7 +8,7 @@ import { wfTruncateUtf8 } from "@/lib/world-forge-shared";
 /** 交给审查员的 Canonical 最大字符数（控制成本） */
 export const WF_REVIEW_MAX_CANONICAL_CHARS = 48_000;
 
-export const WF_REVIEWER_SYSTEM = `你是 CanonWeave **WorldForge 审查员**（A2A 工作流下游）。你的职责是**对抗式一致性审查**（不是润色文笔），但须与**产品策略**一致：**不要为追求完美而卡死流水线**——用户可在后续版本**打补丁**。
+export const WF_REVIEWER_SYSTEM = `你是 OmniStage（万象剧场）**WorldForge 审查员**（A2A 工作流下游）。你的职责是**对抗式一致性审查**（不是润色文笔），但须与**产品策略**一致：**不要为追求完美而卡死流水线**——用户可在后续版本**打补丁**。
 
 你会收到：世界名称、用户原始大纲（可能截断）、解析摘要（可能截断）、以及当前候选 **Canonical JSON**（可能截断）。
 

@@ -1,4 +1,4 @@
-# CanonWeave
+# OmniStage（万象剧场）
 
 ![Platform](https://img.shields.io/badge/platform-web-blue)
 ![Mode](https://img.shields.io/badge/mode-multi--agent-purple)
@@ -10,9 +10,36 @@
 
 ---
 
+## 致敬与学习（SillyTavern）
+
+OmniStage（万象剧场）在产品设计上长期受 **SillyTavern** 启发，尤其是在角色卡语义、世界书使用习惯与可玩性导向方面。  
+我们把它视作重要的学习对象与社区标杆，并在此明确致敬与感谢。
+
+同时，OmniStage（万象剧场）的目标不是简单复刻，而是在其启发基础上继续探索：
+
+- 更强调“世界持续演化”的双系统闭环（WorldForge + Tavern）
+- 更强调导演/环境/NPC 多智能体协同推进
+- 更强调世界版本资产化与长期连载体验
+
+> 说明：OmniStage（万象剧场）为独立项目，与 SillyTavern 官方无从属关系。
+
+**Tribute & Inspiration (SillyTavern)**  
+OmniStage is deeply inspired by **SillyTavern**, especially in character-card semantics, lorebook habits, and its playability-first mindset.  
+We sincerely respect and appreciate the SillyTavern community as an important reference in this space.
+
+Our goal is not to replicate, but to continue exploring on top of that inspiration:
+
+- a dual-loop product flow for long-running worlds (WorldForge + Tavern)
+- director/environment/NPC multi-agent collaboration for scene progression
+- versioned world assets for persistent, serialized roleplay experiences
+
+> OmniStage is an independent project and is not affiliated with the official SillyTavern team.
+
+---
+
 ## 这是什么
 
-CanonWeave 不是“你问一句、AI 回一句”的聊天工具。  
+OmniStage（万象剧场）不是“你问一句、AI 回一句”的聊天工具。  
 它的核心目标是：把角色扮演做成一个可持续演化的世界体验。
 
 你可以把它理解为一个双系统循环：
@@ -33,6 +60,7 @@ CanonWeave 不是“你问一句、AI 回一句”的聊天工具。
 - 环境 Agent 负责局势反馈与后果表达
 - 多个 NPC Agents 可协同回应、互相对话、共同推进同一幕
 - 支持角色抬头渲染与场景分段，尽量做到“谁说话就是谁”
+- 对角色卡与世界书语义保持对 SillyTavern 习惯的兼容与学习
 
 ### 2) 世界熔炉（WorldForge）
 

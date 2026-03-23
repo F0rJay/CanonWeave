@@ -119,7 +119,7 @@ export async function runLayeredMemorySupervisorExtract(input: {
     const r = await generateObject({
       model,
       schema: zodSchema(SupervisorSchema),
-      prompt: `你是 CanonWeave「监督者 Agent」：维护**共享记忆池**（全员一致可见）与各 NPC **私有记忆**（仅该角色后台），并产出可写入**全局洞察层**的候选条。
+      prompt: `你是 OmniStage（万象剧场）「监督者 Agent」：维护**共享记忆池**（全员一致可见）与各 NPC **私有记忆**（仅该角色后台），并产出可写入**全局洞察层**的候选条。
 规则：
 1) goal_ops：只调整任务/阶段目标 id 要稳定简短（如 g1、g2）；add 需带 text；remove 删除；update 可改 text/status。
 2) world_state_summary：若需更新共享「世界状态摘要」则给完整新文本，否则 null（表示保持原摘要不变）。

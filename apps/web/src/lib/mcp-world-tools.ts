@@ -57,13 +57,13 @@ export async function callWorldMcpTool(
     args: [scriptPath],
     env: {
       ...getDefaultEnvironment(),
-      CANONWEAVE_DB_PATH: dbPath,
-      CANONWEAVE_MCP_USER_ID: userId,
+      OMNISTAGE_DB_PATH: dbPath,
+      OMNISTAGE_MCP_USER_ID: userId,
     },
     stderr: "inherit",
   });
 
-  const client = new Client({ name: "canonweave-web", version: "0.1.0" });
+  const client = new Client({ name: "omnistage-web", version: "0.1.0" });
   await client.connect(transport);
 
   try {

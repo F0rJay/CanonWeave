@@ -29,7 +29,7 @@ export async function rollDiceViaMcp(expression: string): Promise<DiceRollResult
     stderr: "inherit",
   });
 
-  const client = new Client({ name: "canonweave-web", version: "0.1.0" });
+  const client = new Client({ name: "omnistage-web", version: "0.1.0" });
 
   await client.connect(transport);
 

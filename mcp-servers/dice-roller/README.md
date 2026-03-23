@@ -1,6 +1,6 @@
-# @canonweave/mcp-dice-roller
+# @omnistage/mcp-dice-roller
 
-CanonWeave 官方 MCP 服务器：**stdio**，工具 **`dice_roll`**（`NdM` 记法，密码学随机）。
+OmniStage（万象剧场）官方 MCP 服务器：**stdio**，工具 **`dice_roll`**（`NdM` 记法，密码学随机）。
 
 ## 开发
 

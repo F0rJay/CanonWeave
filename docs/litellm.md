@@ -1,4 +1,4 @@
-# LiteLLM 接入说明（CanonWeave）
+# LiteLLM 接入说明（OmniStage / 万象剧场）
 
 ## 架构
 

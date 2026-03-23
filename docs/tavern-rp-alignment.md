@@ -1,6 +1,6 @@
 # 酒馆对话与 SillyTavern 对齐（角色 / Persona / 选角 / 注入顺序）
 
-CanonWeave 酒馆会话在调用模型前合并系统侧上下文，语义对齐 [SillyTavern「角色」](https://sillytavern.wiki/usage/characters/)、[人格（Personas）](https://sillytavern.wiki/usage/core-concepts/personas/) 与「世界书 + 角色卡」工作流（本仓库不含头像/语音等多模态）。
+OmniStage（万象剧场）酒馆会话在调用模型前合并系统侧上下文，语义对齐 [SillyTavern「角色」](https://sillytavern.wiki/usage/characters/)、[人格（Personas）](https://sillytavern.wiki/usage/core-concepts/personas/) 与「世界书 + 角色卡」工作流（本仓库不含头像/语音等多模态）。
 
 ## 数据落点
 

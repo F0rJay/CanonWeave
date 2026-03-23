@@ -45,7 +45,7 @@ function normalizeSearchResults(raw: unknown): Array<{ memory: string; score?: n
 /**
  * 懒加载 Mem0 Platform 客户端。未开启、缺 Key 或构造失败时返回 null。
  */
-export function getCanonweaveMem0Client(): MemoryClient | null {
+export function getOmnistageMem0Client(): MemoryClient | null {
   if (!isMem0Enabled()) {
     clientSingleton = null;
     return null;
@@ -57,7 +57,7 @@ export function getCanonweaveMem0Client(): MemoryClient | null {
   if (!apiKey) {
     clientInitFailed = true;
     console.warn(
-      "[CanonWeave Mem0] CW_MEM0 已开启但未配置 CW_MEM0_PLATFORM_API_KEY / MEM0_API_KEY / CW_MEM0_API_KEY，已跳过。"
+      "[OmniStage Mem0] CW_MEM0 已开启但未配置 CW_MEM0_PLATFORM_API_KEY / MEM0_API_KEY / CW_MEM0_API_KEY，已跳过。"
     );
     return null;
   }
@@ -71,7 +71,7 @@ export function getCanonweaveMem0Client(): MemoryClient | null {
     return clientSingleton;
   } catch (e) {
     clientInitFailed = true;
-    console.warn("[CanonWeave Mem0] MemoryClient 初始化失败:", e);
+    console.warn("[OmniStage Mem0] MemoryClient 初始化失败:", e);
     return null;
   }
 }
@@ -101,7 +101,7 @@ export async function searchMem0ForTurn(input: {
   threadId: string;
   query: string;
 }): Promise<{ block: string | null; rawCount: number; memories: string[] }> {
-  const client = getCanonweaveMem0Client();
+  const client = getOmnistageMem0Client();
   if (!client) {
     return { block: null, rawCount: 0, memories: [] };
   }
@@ -118,7 +118,7 @@ export async function searchMem0ForTurn(input: {
     const block = formatMem0RecallForPrompt(items);
     return { block, rawCount: items.length, memories };
   } catch (e) {
-    console.warn("[CanonWeave Mem0] search 失败:", e);
+    console.warn("[OmniStage Mem0] search 失败:", e);
     return { block: null, rawCount: 0, memories: [] };
   }
 }
@@ -130,7 +130,7 @@ export async function ingestMem0Turn(input: {
   assistantText: string;
   worldVersionId?: string | null;
 }): Promise<{ ok: boolean; error?: string }> {
-  const client = getCanonweaveMem0Client();
+  const client = getOmnistageMem0Client();
   if (!client) return { ok: false, error: "mem0_unavailable" };
 
   const userLine = input.userText.trim();
@@ -153,13 +153,13 @@ export async function ingestMem0Turn(input: {
       ],
       {
         user_id,
-        metadata: { ...metadata, source: "canonweave_tavern" },
+        metadata: { ...metadata, source: "omnistage_tavern" },
       }
     );
     return { ok: true };
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
-    console.warn("[CanonWeave Mem0] add 失败:", e);
+    console.warn("[OmniStage Mem0] add 失败:", e);
     return { ok: false, error: msg };
   }
 }
