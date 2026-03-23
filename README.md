@@ -3,7 +3,7 @@
 ![Platform](https://img.shields.io/badge/platform-web-blue)
 ![Mode](https://img.shields.io/badge/mode-multi--agent-purple)
 ![Experience](https://img.shields.io/badge/experience-immersive-green)
-![License](https://img.shields.io/badge/license-TBD-lightgrey)
+![License](https://img.shields.io/badge/license-Apache--2.0-blue)
 
 > 一个面向长期游玩的 AI 角色扮演产品：  
 > 用 **世界熔炉（WorldForge）** 共创世界，用 **酒馆（Tavern）** 进入世界并持续推进剧情。
@@ -180,5 +180,5 @@ npm run dev:web
 
 ## License
 
-暂未发布正式许可证（TBD）。
+Apache License 2.0（见仓库根目录 `LICENSE`）。
 
